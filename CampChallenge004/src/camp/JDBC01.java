@@ -20,15 +20,15 @@ public class JDBC01 {
 
 			db_con.close();
 
-		}catch(SQLException e_sql){
+		} catch(SQLException e_sql){
 
 			System.out.println("接続時にエラーが発生しました：" + e_sql.toString());
 
-		}catch(Exception e) {
+		} catch(Exception e) {
 
 			System.out.println("接続時にエラーが発生しました：" + e.toString());
 
-		}finally {
+		} finally {
 
 			if(db_con != null){
 
