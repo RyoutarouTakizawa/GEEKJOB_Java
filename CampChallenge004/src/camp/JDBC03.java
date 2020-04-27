@@ -4,7 +4,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 
 
 public class JDBC03 {
@@ -26,9 +25,9 @@ public class JDBC03 {
 			db_data = db_st.executeQuery();
 
 			while(db_data.next()){
-
-				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+				
 				System.out.println("ID：" + db_data.getInt("profilesID") + ", 名前：" + db_data.getString("name") + ", 電話番号：" + db_data.getString("tel") + ", 年齢：" + db_data.getInt("age") + ", 誕生日：" + db_data.getString("birthday") );
+			
 			}
 
 			db_data.close();

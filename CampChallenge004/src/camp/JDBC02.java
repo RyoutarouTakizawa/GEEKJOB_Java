@@ -3,7 +3,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 
 public class JDBC02 {
 
@@ -23,9 +22,7 @@ public class JDBC02 {
 			db_st.setString(2, "滝澤遼太郎");
 			db_st.setString(3, "090-2468-1357");
 			db_st.setInt(4, 25);
-
-			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-			db_st.setDate(5, new java.sql.Date(dateFormat.parse("1994-06-24").getTime()));
+			db_st.setString(5, "1994-06-24");
 
 			int profiledata = db_st.executeUpdate();
 			System.out.print(profiledata + "行が追加されました");
