@@ -20,6 +20,7 @@ public class JDBC01 {
 
 			db_con.close();
 
+<<<<<<< HEAD
 		} catch(SQLException e_sql){
 
 			System.out.println("接続時にエラーが発生しました：" + e_sql.toString());
@@ -29,6 +30,17 @@ public class JDBC01 {
 			System.out.println("接続時にエラーが発生しました：" + e.toString());
 
 		} finally {
+=======
+		}catch(SQLException e_sql){
+
+			System.out.println("接続時にエラーが発生しました：" + e_sql.toString());
+
+		}catch(Exception e) {
+
+			System.out.println("接続時にエラーが発生しました：" + e.toString());
+
+		}finally {
+>>>>>>> refs/remotes/RyoutarouTakizawa/master
 
 			if(db_con != null){
 
