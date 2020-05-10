@@ -27,6 +27,7 @@
         自己紹介:<%= hs.getAttribute("comment")%><br>
         上記の内容で登録します。よろしいですか？
         <form action="insertresult" method="POST">
+            <input type="hidden" name="ac" value="<%= hs.getAttribute("ac")%>">
             <input type="submit" name="yes" value="はい">
         </form>
     <% }else{ %>
@@ -50,7 +51,7 @@
             電話番号が入力されていません<br>
         <% }%>
         <%if(hs.getAttribute("comment").equals("")){ %>
-        	自己紹介が入力されていません<br>
+        	自己紹介文が入力されていません<br>
         <% }%>
     <% } %>
         <form action="insert" method="POST">

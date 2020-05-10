@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>検索フォーム</title>
+</head>
+<body>
+<form action="/CampChallenge004/JDBC12" method="POST">
+
+		以下の内容で検索します
+		<input type="submit" name="btnsubmit" value="検索"><br><br>
+		名前：<input type="text" name="searchname"><br><br>
+		年齢：<input type="number" name="searchage" max="130" min="0" size="3" required><br><br>
+		誕生日：西暦<input type="number" name="searchyear" max="9999" min="1850" size="4">年
+		<input type="number" name="searchmonth" max="12" min="1" size="2">月
+		<input type="number" name="searchday" max="31" min="1" size="2">日
+
+	</form>
+</body>
+</html>
