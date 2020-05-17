@@ -63,7 +63,7 @@ public class InsertResult extends HttpServlet {
 			UserDataDAO .getInstance().insert(userdata);
 
 			request.getRequestDispatcher("/insertresult.jsp").forward(request, response);
-			session.invalidate();			
+			
 		}catch(Exception e){
 			//データ挿入に失敗したらエラーページにエラー文を渡して表示
 			request.setAttribute("error", e.getMessage());

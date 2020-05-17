@@ -42,35 +42,35 @@ public class InsertConfirm extends HttpServlet {
 			//フォームからの入力を取得
 			String name = request.getParameter("name");
 			if(name == null) {
-				name = "";	
-			}			
-			udb.setName(name);			
+				name = "";
+			}
+			udb.setName(name);
 			String year = request.getParameter("year");
 			if(year == null) {
-				year = "";	
-			}	
+				year = "";
+			}
 			udb.setYear(year);
 			String month = request.getParameter("month");
 			if(month == null) {
-				month = "";	
-			}	
+				month = "";
+			}
 			udb.setMonth(month);
 			String day = request.getParameter("day");
 			if(day == null) {
-				day = "";	
-			}	
+				day = "";
+			}
 			udb.setDay(day);
 			String type = request.getParameter("type");
 			udb.setType(type);
 			String tell = request.getParameter("tell");
 			if(tell == null) {
-				tell = "";	
-			}	
+				tell = "";
+			}
 			udb.setTell(tell);
 			String comment = request.getParameter("comment");
 			if(comment == null) {
-				comment = "";	
-			}	
+				comment = "";
+			}
 			udb.setComment(comment);
 
 			//セッションに格納
