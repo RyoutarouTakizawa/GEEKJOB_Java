@@ -1,7 +1,7 @@
 package jums;
 
+//②不要なimportを削除
 import java.io.IOException;
-import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,6 +34,7 @@ public class InsertResult extends HttpServlet {
         HttpSession session = request.getSession();
 
         try{
+
             request.setCharacterEncoding("UTF-8");//リクエストパラメータの文字コードをUTF-8に変更
 
             //アクセスルートチェック
