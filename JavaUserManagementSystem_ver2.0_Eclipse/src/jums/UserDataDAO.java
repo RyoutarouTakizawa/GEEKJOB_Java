@@ -107,7 +107,7 @@ public class UserDataDAO {
 
 			}
 			ResultSet rs = st.executeQuery();
-
+			rs.next();
 			UserDataDTO resultUd = new UserDataDTO();
 
 			resultUd.setUserID(rs.getInt(1));
