@@ -107,20 +107,27 @@ public class UserDataDAO {
 
 			}
 			ResultSet rs = st.executeQuery();
-			rs.next();
+//			rs.next();
+			
 			UserDataDTO resultUd = new UserDataDTO();
-
-			resultUd.setUserID(rs.getInt(1));
+			
+			
+            while(rs.next()) {
+			
+            resultUd.setUserID(rs.getInt(1));
 			resultUd.setName(rs.getString(2));
 			resultUd.setBirthday(rs.getDate(3));
 			resultUd.setTell(rs.getString(4));
 			resultUd.setType(rs.getInt(5));
 			resultUd.setComment(rs.getString(6));
 			resultUd.setNewDate(rs.getTimestamp(7));
+			
+            }
 
 			System.out.println("search completed");
 
 			return resultUd;
+			
 		}catch(SQLException e){
 			System.out.println(e.getMessage());
 			throw new SQLException(e);
